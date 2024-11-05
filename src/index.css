@@ -1,0 +1,104 @@
+#canvas-container{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #13131b;
+}
+html{
+overflow: hidden ;
+}
+
+#overlay {
+    background-color: rgb(182, 173, 233);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 50vh;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    width: 500px;
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: translate(100%,-50%); /* Position de départ */
+}
+
+/* Animation avec keyframes */
+@keyframes slideIn {
+    from {
+        transform: translate(100%,-50%); /* Dans l'écran */
+    }
+    to {
+        transform: translate(0%,-50%); /* Hors de l'écran */
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translate(0%,-50%); /* Hors de l'écran */
+    }
+    to {
+        transform: translate(100%,-50%); /* Dans l'écran */
+    }
+}
+
+
+/* Classe qui active l'animation */
+#overlay.slide-in {
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+#overlay.slide-out {
+    animation: slideOut 0.5s ease-in-out forwards;
+}
+#img-region{
+    width: 500px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    height: 300px;
+    margin: 1rem;
+}
+
+#presentation-region{
+    height: 50vh;
+    overflow-y: scroll;
+    overflow-x:hidden;
+}
+
+h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: 1rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
