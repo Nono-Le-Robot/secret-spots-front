@@ -1,10 +1,12 @@
 import Guide from "./Guide";
+import Leafleet from "./leafleet";
 
 function App() {
 
   return (
     <>
-   <Guide/>
+   {/* <Guide/> */}
+   <Leafleet/>
         </>
   );
 }
