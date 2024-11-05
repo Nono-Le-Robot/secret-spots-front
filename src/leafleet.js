@@ -11,17 +11,19 @@ L.Icon.Default.mergeOptions({
 });
 
 const Leafleet = () => {
-    const position = [51.505, -0.09]; // Remplacez par vos coordonnées
+    // Coordonnées du centre de la France
+    const position = [46.6034, 1.8883]; // Centre de la France
+    const zoomLevel = 6; // Niveau de zoom
 
     return (
-        <MapContainer center={position} zoom={10} style={{ height: '100vh', width: '100%' }}>
+        <MapContainer center={position} zoom={zoomLevel} style={{ height: '100vh', width: '100%' }}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
             <Marker position={position}>
                 <Popup>
-                    Un point d'intérêt.
+                    Centre de la France.
                 </Popup>
             </Marker>
         </MapContainer>
