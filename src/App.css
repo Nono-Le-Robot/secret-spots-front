@@ -1,0 +1,116 @@
+/* Styles de base pour l'application */
+.app-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Styles du header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff6f61;
+    /* Vous pouvez choisir la couleur que vous souhaitez */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 20px;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch .slider {
+    position: relative;
+    width: 34px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.switch input:checked+.slider {
+    background-color: #4caf50;
+}
+
+.switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: white;
+    left: 4px;
+    bottom: 4px;
+    transition: 0.4s;
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(14px);
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e55d52;
+}
+
+/* Styles du formulaire d'inscription */
+.register-form {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-form button {
+    width: 100%;
+    background-color: #4caf50;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: #45a049;
+}
